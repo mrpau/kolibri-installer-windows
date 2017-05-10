@@ -384,9 +384,9 @@ begin
     ShellExec('open', '\Python27\Scripts\Kolibri.exe ', 'plugin kolibri_instant_schools_plugin enable', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
     RegWriteStringValue(
         HKLM,
-        'kolibri_instant_schools_plugin.auth.phone_hashing_settings',
+        'System\CurrentControlSet\Control\Session Manager\Environment',
         'DJANGO_SETTINGS_MODULE',
-        ExtractFileDir(PipPath)
+        'kolibri_instant_schools_plugin.auth.phone_hashing_settings'
     );
 end;
 
