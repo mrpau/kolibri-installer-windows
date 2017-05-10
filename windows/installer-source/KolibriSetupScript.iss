@@ -381,7 +381,7 @@ begin
         'KOLIBRI_SCRIPT_DIR',
         ExtractFileDir(PipPath)
     );
-    ShellExec('open', '\Python27\Scripts\Kolibri.exe ', 'plugin kolibri_instant_schools_plugin enable', SW_HIDE, ewWaitUntilTerminated, stopServerCode);
+    ShellExec('open', '\Python27\Scripts\Kolibri.exe ', 'plugin kolibri_instant_schools_plugin enable', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
 end;
 
 function InitializeSetup(): Boolean;
