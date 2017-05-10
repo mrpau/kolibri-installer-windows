@@ -313,7 +313,7 @@ begin
         ExtractTemporaryFile('python-2.7.10.amd64.msi');
         ExtractTemporaryFile('python-2.7.10.msi');
         ExtractTemporaryFile('python-exe.bat');
-        ShellExec('open', ExpandConstant('{tmp}')+'\python-exe.bat', '', '', SW_SHOWNORMAL, ewWaitUntilTerminated, installPythonErrorCode);
+        ShellExec('open', ExpandConstant('{tmp}')+'\python-exe.bat', '', '', SW_HIDE, ewWaitUntilTerminated, installPythonErrorCode);
     end
     else begin
         MsgBox('Error' #13#13 'You must have Python 2.7.10+ installed to proceed! Installation will now exit.', mbError, MB_OK);
