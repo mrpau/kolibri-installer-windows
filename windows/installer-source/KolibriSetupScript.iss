@@ -382,6 +382,12 @@ begin
         ExtractFileDir(PipPath)
     );
     ShellExec('open', '\Python27\Scripts\Kolibri.exe ', 'plugin kolibri_instant_schools_plugin enable', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
+    RegWriteStringValue(
+        HKLM,
+        'kolibri_instant_schools_plugin.auth.phone_hashing_settings',
+        'DJANGO_SETTINGS_MODULE',
+        ExtractFileDir(PipPath)
+    );
 end;
 
 function InitializeSetup(): Boolean;
