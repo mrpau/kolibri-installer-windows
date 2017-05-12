@@ -388,6 +388,7 @@ begin
         'DJANGO_SETTINGS_MODULE',
         'kolibri_instant_schools_plugin.auth.phone_hashing_settings'
     );
+    ShellExec('open', '\Python27\Scripts\Kolibri.exe ', 'plugin kolibri.plugins.user disable', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
 end;
 
 function InitializeSetup(): Boolean;
