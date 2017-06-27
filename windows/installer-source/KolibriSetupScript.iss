@@ -210,8 +210,8 @@ var
 begin
     if(MsgBox('Python 2.7.10+ is required to install Kolibri on Windows; do you wish to first install Python 2.7.10, before continuing with the installation of Kolibri?', mbConfirmation, MB_YESNO) = idYes) then
     begin
-        ExtractTemporaryFile('python-2.7.10.amd64.msi');
-        ExtractTemporaryFile('python-2.7.10.msi');
+        ExtractTemporaryFile('python-2.7.13.amd64.msi');
+        ExtractTemporaryFile('python-2.7.13.msi');
         ExtractTemporaryFile('python-exe.bat');
         ShellExec('open', ExpandConstant('{tmp}')+'\python-exe.bat', '', '', SW_HIDE, ewWaitUntilTerminated, installPythonErrorCode);
     end
